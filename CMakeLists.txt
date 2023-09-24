@@ -11,7 +11,7 @@ add_library(lib STATIC ${LIB_FILES})
 
 
 # EXECUTABLES
-LIST(APPEND HEADER_FILES "lib/types.h")
+LIST(APPEND HEADER_FILES "lib/data_structures.h")
 LIST(APPEND SOURCE_FILES "main.cpp")
 
 # Define an executable with a name and the files

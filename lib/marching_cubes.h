@@ -3,7 +3,7 @@
 
 #include <utility>
 #include <vector>
-#include "types.h"
+#include "data_structures.h"
 
 using namespace std;
 
@@ -44,6 +44,8 @@ class MarchingCubes {
 
         /// edgeTable[i] is a 12 bit number; i is a cubeIndex
         /// edgeTable[i][j] = 1 if isosurface intersects edge j for cubeIndex i
+        // 256 are the possible configurations of vertices (8bit), where vertex i is 1 if it is above the isovalue
+        // the 12 bit numbers represent the edge indexes, it is 1 when it intersects the edge.
         const int edgeTable[256] =
         {
             0x0  , 0x109, 0x203, 0x30a, 0x406, 0x50f, 0x605, 0x70c,
@@ -81,6 +83,7 @@ class MarchingCubes {
         };
 
         /// triangleTable[i] is a list of edges forming triangles for cubeIndex i
+        // The triangulation created with the specific selected edges. At most 16 vertex triangulation.
         const int triangleTable[256][16] =
         {
             {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1},

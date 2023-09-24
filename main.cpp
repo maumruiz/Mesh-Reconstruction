@@ -13,7 +13,7 @@ int main()
     string file_out = ""; // out model path
     float isovalue = 0.0;
 
-    MarchingCubes handle = MarchingCubes();
+    MarchingCubes marchingCubes = MarchingCubes();
     int max = 400;
 
     // Generate or read the scalar field
@@ -26,7 +26,7 @@ int main()
 
     // Reconstruct mesh
     cout << "Triangulating using marching cubes..." << flush;
-    auto triangles = handle.triangulate_field(field, isovalue);
+    auto triangles = marchingCubes.triangulate_field(field, isovalue);
     cout << "Done. \n"
          << flush;
 

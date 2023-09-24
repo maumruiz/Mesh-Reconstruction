@@ -1,7 +1,7 @@
 #ifndef SCALARFIELD_H
 #define SCALARFIELD_H
 
-#include "types.h"
+#include "data_structures.h"
 #include <vector>
 
 using namespace std;

@@ -1,15 +1,13 @@
-#ifndef UTILS_H
-#define UTILS_H
+#pragma once
 
 #include <iostream>
 #include <fstream>
 #include <map>
 #include <vector>
-#include "types.h"
+#include <string>
+#include "data_structures.h"
 
 using namespace std;
 
 void write_to_ply(vector<vector<Point>> &triangles, const char* path);
-void write_triangles_to_file(vector<vector<Point>> triangles, const char* path);
-
-#endif
+void write_to_obj(Mesh const& mesh, string const& file);
